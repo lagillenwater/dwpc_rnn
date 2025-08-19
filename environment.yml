@@ -11,4 +11,4 @@ dependencies:
   - requests>=2.31.0
   - pip
   - pip:
-      - hetmatpy>=0.3.0
+      - hetmatpy>=0.1.0
