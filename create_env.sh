@@ -1,5 +1,6 @@
 #!/bin/zsh
-# Create the dwpc_rnn conda environment from environment.yml
+
+# Create the dwpc_rnn_clean conda environment from environment.yml
 
 conda env create -f environment.yml
 
