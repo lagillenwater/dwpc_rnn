@@ -29,13 +29,23 @@ conda activate dwpc_rnn
 ##########################################################################################################
 ##########################################################################################################
 
-echo "****** permuting graph ******"
+echo "****** permuting graphs ******"
 
+# Loop through permutation numbers 0-10 to create 11 permuted graphs
+for permutation_num in {0..10}; do
+    echo "Creating permutation ${permutation_num}..."
+    
+    # Define input and output notebook paths
+    input_notebook=${notebooks_path}/1_generate-permutations.ipynb
+    output_notebook=${notebooks_path}/1_generate-permutations_output_${permutation_num}.ipynb
+    
+    # Run papermill with the permutation_number parameter
+    papermill "$input_notebook" "$output_notebook" -p permutation_number "$permutation_num"
+    
+    echo "Completed permutation ${permutation_num}"
+done
 
-input_notebook=${notebooks_path}/1_generate-permutations.ipynb
-output_notebook=${notebooks_path}/1_generate-permutations.ipynb
-
-papermill "$input_notebook" "$output_notebook" 
+echo "All permutations (0-10) completed successfully!" 
 
 
 # Deactivate the virtual environment w/ conda
