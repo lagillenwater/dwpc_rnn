@@ -2,8 +2,8 @@
 
 #SBATCH --job-name=create_env
 #SBATCH --account=amc-general
-#SBATCH --output=./logs/create_env.log
-#SBATCH --error=./logs/error_create_env.log
+#SBATCH --output=../logs/create_env.log
+#SBATCH --error=../logs/error_create_env.log
 #SBATCH --time=00:30:00
 #SBATCH --partition=amilan
 #SBATCH --qos=normal

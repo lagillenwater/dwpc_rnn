@@ -1,0 +1,4 @@
+Input Notebook:  /projects/lgillenwater@xsede.org/dwpc_rnn/notebooks/1_generate-permutations.ipynb
+Output Notebook: /projects/lgillenwater@xsede.org/dwpc_rnn/notebooks/1_generate-permutations_output_0.ipynb
+Executing:   0%|          | 0/8 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:  12%|█▎        | 1/8 [00:29<03:23, 29.13s/cell]Executing:  88%|████████▊ | 7/8 [00:29<00:03,  3.06s/cell]Executing:  88%|████████▊ | 7/8 [00:40<00:03,  3.06s/cell]
