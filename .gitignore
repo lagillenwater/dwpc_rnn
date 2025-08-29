@@ -213,3 +213,14 @@ notebooks/nodes/Side Effect.tsv
 notebooks/nodes/Symptom.tsv
 environments/logs/create_env.log
 environments/logs/error_create_env.log
+data/nodes/Anatomy.tsv
+data/nodes/Biological Process.tsv
+data/nodes/Cellular Component.tsv
+data/nodes/Compound.tsv
+data/nodes/Disease.tsv
+data/nodes/Gene.tsv
+data/nodes/Molecular Function.tsv
+data/nodes/Pathway.tsv
+data/nodes/Pharmacologic Class.tsv
+data/nodes/Side Effect.tsv
+data/nodes/Symptom.tsv
