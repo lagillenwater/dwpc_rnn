@@ -176,3 +176,38 @@ permutations/003.hetmat/edges/GpMF.sparse.npz
 permutations/003.hetmat/edges/GpPW.sparse.npz
 permutations/003.hetmat/edges/Gr>G.sparse.npz
 permutations/003.hetmat/edges/PCiC.sparse.npz
+notebooks/edges/AdG.sparse.npz
+notebooks/edges/AeG.sparse.npz
+notebooks/edges/AuG.sparse.npz
+notebooks/edges/CbG.sparse.npz
+notebooks/edges/CcSE.sparse.npz
+notebooks/edges/CdG.sparse.npz
+notebooks/edges/CpD.sparse.npz
+notebooks/edges/CrC.sparse.npz
+notebooks/edges/CtD.sparse.npz
+notebooks/edges/CuG.sparse.npz
+notebooks/edges/DaG.sparse.npz
+notebooks/edges/DdG.sparse.npz
+notebooks/edges/DlA.sparse.npz
+notebooks/edges/DpS.sparse.npz
+notebooks/edges/DrD.sparse.npz
+notebooks/edges/DuG.sparse.npz
+notebooks/edges/GcG.sparse.npz
+notebooks/edges/GiG.sparse.npz
+notebooks/edges/GpBP.sparse.npz
+notebooks/edges/GpCC.sparse.npz
+notebooks/edges/GpMF.sparse.npz
+notebooks/edges/GpPW.sparse.npz
+notebooks/edges/Gr>G.sparse.npz
+notebooks/edges/PCiC.sparse.npz
+notebooks/nodes/Anatomy.tsv
+notebooks/nodes/Biological Process.tsv
+notebooks/nodes/Cellular Component.tsv
+notebooks/nodes/Compound.tsv
+notebooks/nodes/Disease.tsv
+notebooks/nodes/Gene.tsv
+notebooks/nodes/Molecular Function.tsv
+notebooks/nodes/Pathway.tsv
+notebooks/nodes/Pharmacologic Class.tsv
+notebooks/nodes/Side Effect.tsv
+notebooks/nodes/Symptom.tsv
