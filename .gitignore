@@ -211,3 +211,5 @@ notebooks/nodes/Pathway.tsv
 notebooks/nodes/Pharmacologic Class.tsv
 notebooks/nodes/Side Effect.tsv
 notebooks/nodes/Symptom.tsv
+environments/logs/create_env.log
+environments/logs/error_create_env.log

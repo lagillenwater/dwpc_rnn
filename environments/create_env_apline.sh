@@ -18,12 +18,7 @@ set -e
 ## for alpine
 module load anaconda
 
-# deactivate any loaded environment
-conda deactivate
-
-# remove environments with the same name
-conda env remove --name dwpc_rnn
-
+# create environment from file
 conda env create -f environment.yml
 
-echo "dwpc_rnn environment created"
+echo "created environment: dwpc_rnn"
