@@ -1,14 +1,16 @@
-
 name: dwpc_rnn
 channels:
-  - conda-forge
+  - defaults
 dependencies:
+  - pip
   - python=3.10
+  - notebook=7.4.5
   - ipykernel=6.30.1
   - ipython=8.37.0
   - jupyterlab=4.4.6
-  - notebook=7.4.5
-  - pip
-  - pip:
-      - hetmatpy==0.1.0
-      - hetnetpy==0.3.1
+- pip:
+    - hetmatpy==0.1.0
+    - hetnetpy==0.3.1  
+    - papermill==2.6.0
+    
+prefix: /projects/lgillenwater@xsede.org/software/anaconda/envs/dwpc_rnn
