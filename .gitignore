@@ -224,3 +224,30 @@ data/nodes/Pathway.tsv
 data/nodes/Pharmacologic Class.tsv
 data/nodes/Side Effect.tsv
 data/nodes/Symptom.tsv
+data/edges/AdG.sparse.npz
+data/edges/AeG.sparse.npz
+data/edges/AuG.sparse.npz
+data/edges/CbG.sparse.npz
+data/edges/CcSE.sparse.npz
+data/edges/CdG.sparse.npz
+data/edges/CpD.sparse.npz
+data/edges/CrC.sparse.npz
+data/edges/CtD.sparse.npz
+data/edges/CuG.sparse.npz
+data/edges/DaG.sparse.npz
+data/edges/DdG.sparse.npz
+data/edges/DlA.sparse.npz
+data/edges/DpS.sparse.npz
+data/edges/DrD.sparse.npz
+data/edges/DuG.sparse.npz
+data/edges/GcG.sparse.npz
+data/edges/GiG.sparse.npz
+data/edges/GpBP.sparse.npz
+data/edges/GpCC.sparse.npz
+data/edges/GpMF.sparse.npz
+data/edges/GpPW.sparse.npz
+data/edges/Gr>G.sparse.npz
+data/edges/PCiC.sparse.npz
+data/permutations/000.hetmat/nodes
+data/permutations/001.hetmat/nodes
+data/permutations/001.hetmat/edges/AdG.sparse.npz
