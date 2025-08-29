@@ -1,0 +1,50 @@
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+Downloading and Extracting Packages
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Installing pip dependencies: ...working... Ran pip subprocess with arguments:
+['/projects/lgillenwater@xsede.org/software/anaconda/envs/dwpc_rnn/bin/python', '-m', 'pip', 'install', '-U', '-r', '/projects/lgillenwater@xsede.org/dwpc_rnn/environments/condaenv.5txbvtzf.requirements.txt', '--exists-action=b']
+Pip subprocess output:
+Collecting hetmatpy==0.1.0 (from -r /projects/lgillenwater@xsede.org/dwpc_rnn/environments/condaenv.5txbvtzf.requirements.txt (line 1))
+  Using cached hetmatpy-0.1.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting hetnetpy==0.3.1 (from -r /projects/lgillenwater@xsede.org/dwpc_rnn/environments/condaenv.5txbvtzf.requirements.txt (line 2))
+  Using cached hetnetpy-0.3.1-py3-none-any.whl.metadata (5.8 kB)
+Collecting numpy (from hetmatpy==0.1.0->-r /projects/lgillenwater@xsede.org/dwpc_rnn/environments/condaenv.5txbvtzf.requirements.txt (line 1))
+  Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+Collecting pandas (from hetmatpy==0.1.0->-r /projects/lgillenwater@xsede.org/dwpc_rnn/environments/condaenv.5txbvtzf.requirements.txt (line 1))
+  Using cached pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+Collecting scipy (from hetmatpy==0.1.0->-r /projects/lgillenwater@xsede.org/dwpc_rnn/environments/condaenv.5txbvtzf.requirements.txt (line 1))
+  Using cached scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting regex (from hetnetpy==0.3.1->-r /projects/lgillenwater@xsede.org/dwpc_rnn/environments/condaenv.5txbvtzf.requirements.txt (line 2))
+  Using cached regex-2025.7.34-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Requirement already satisfied: python-dateutil>=2.8.2 in /projects/lgillenwater@xsede.org/software/anaconda/envs/dwpc_rnn/lib/python3.10/site-packages (from pandas->hetmatpy==0.1.0->-r /projects/lgillenwater@xsede.org/dwpc_rnn/environments/condaenv.5txbvtzf.requirements.txt (line 1)) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /projects/lgillenwater@xsede.org/software/anaconda/envs/dwpc_rnn/lib/python3.10/site-packages (from pandas->hetmatpy==0.1.0->-r /projects/lgillenwater@xsede.org/dwpc_rnn/environments/condaenv.5txbvtzf.requirements.txt (line 1)) (2025.2)
+Collecting tzdata>=2022.7 (from pandas->hetmatpy==0.1.0->-r /projects/lgillenwater@xsede.org/dwpc_rnn/environments/condaenv.5txbvtzf.requirements.txt (line 1))
+  Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: six>=1.5 in /projects/lgillenwater@xsede.org/software/anaconda/envs/dwpc_rnn/lib/python3.10/site-packages (from python-dateutil>=2.8.2->pandas->hetmatpy==0.1.0->-r /projects/lgillenwater@xsede.org/dwpc_rnn/environments/condaenv.5txbvtzf.requirements.txt (line 1)) (1.17.0)
+Using cached hetmatpy-0.1.0-py3-none-any.whl (42 kB)
+Using cached hetnetpy-0.3.1-py3-none-any.whl (54 kB)
+Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+Using cached pandas-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+Using cached tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Using cached regex-2025.7.34-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (789 kB)
+Using cached scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+Installing collected packages: tzdata, regex, numpy, scipy, pandas, hetnetpy, hetmatpy
+
+Successfully installed hetmatpy-0.1.0 hetnetpy-0.3.1 numpy-2.2.6 pandas-2.3.2 regex-2025.7.34 scipy-1.15.3 tzdata-2025.2
+
+done
+#
+# To activate this environment, use
+#
+#     $ conda activate dwpc_rnn
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+created environment: dwpc_rnn
