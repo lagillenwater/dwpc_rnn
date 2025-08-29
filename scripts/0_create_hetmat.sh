@@ -22,6 +22,7 @@ notebooks_path="${BASE_DIR}/notebooks"
 data_path="${BASE_DIR}/data"
 
 # Conda Environment:
+module load anaconda
 conda deactivate
 conda activate dwpc_rnn
 
@@ -31,8 +32,8 @@ conda activate dwpc_rnn
 echo "****** downloading and creating hetmat agecencies******"
 
 
-input_notebook=${notebooks_path}/01.create-hetmat.ipynb
-output_notebook=${notebooks_path}/01.create-hetmat.ipynb
+input_notebook=${notebooks_path}/0_create-hetmat.ipynb
+output_notebook=${notebooks_path}/0_create-hetmat.ipynb
 
 papermill "$input_notebook" "$output_notebook" 
 
