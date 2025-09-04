@@ -9,6 +9,7 @@ dependencies:
   - ipython=8.37.0
   - jupyterlab=4.4.6
   - pytorch=1.12.1
+  - scikit-learn-1.7.1 
 - pip:
     - hetmatpy==0.1.0
     - hetnetpy==0.3.1  
