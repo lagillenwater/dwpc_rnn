@@ -1,2 +1,5 @@
 # Ignore entire data folder
 data/
+logs/
+notebooks/outputs
+scripts/permutation_jobs

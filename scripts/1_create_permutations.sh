@@ -1,4 +1,14 @@
-#!/bin/bash
+#!/bin/sh
+
+#SBATCH --job-name=create_hetmat
+#SBATCH --account=amc-general
+#SBATCH --output=../logs/output_create_permutations.log
+#SBATCH --error=../logs/error_create_permutations.log
+#SBATCH --time=01:00:00
+#SBATCH --partition=amilan
+#SBATCH --qos=normal
+#SBATCH --ntasks-per-node=4
+#SBATCH --nodes=1 
 
 # Master script to generate individual SLURM job scripts for each permutation
 # This allows for distributed processing across multiple HPC nodes
@@ -6,19 +16,16 @@
 # Exit if any command fails
 set -e
 
-# Get the directory of this script and define base paths relative to it
-SCRIPT_DIR=$(dirname "$(realpath "$0")")
-BASE_DIR=$(realpath "$SCRIPT_DIR/..")
 
-# Define paths
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+BASE_DIR=$(realpath "$SLURM_SUBMIT_DIR/..")
+
+# Get the directory of this script and define base paths relative to it
 notebooks_path="${BASE_DIR}/notebooks"
 data_path="${BASE_DIR}/data"
-jobs_dir="${SCRIPT_DIR}/permutation_jobs"
 logs_dir="${BASE_DIR}/logs"
+jobs_dir="${BASE_DIR}/scripts/permutation_jobs"
 
-# Create directories if they don't exist
-mkdir -p "$jobs_dir"
-mkdir -p "$logs_dir"
 
 echo "****** Generating SLURM job scripts for permutations ******"
 
@@ -28,18 +35,18 @@ create_permutation_job() {
     local job_script="${jobs_dir}/permutation_${perm_num}.sh"
     
     cat > "$job_script" << EOF
-#!/bin/bash
+#!/bin/sh
 
 #SBATCH --job-name=perm_${perm_num}
 #SBATCH --account=amc-general
-#SBATCH --output=${logs_dir}/output_permutation_${perm_num}.log
-#SBATCH --error=${logs_dir}/error_permutation_${perm_num}.log
+#SBATCH --output=../../logs/output_permutation_${perm_num}.log
+#SBATCH --error=../../logs/error_permutation_${perm_num}.log
 #SBATCH --time=01:00:00
 #SBATCH --partition=amilan
+#SBATCH --ntasks-per-node=12
 #SBATCH --qos=normal
-#SBATCH --ntasks-per-node=4
 #SBATCH --nodes=1
-#SBATCH --mem=8G
+#SBATCH --mem=12G
 
 # Exit if any command fails
 set -e
@@ -56,7 +63,7 @@ conda activate dwpc_rnn
 # Define paths
 notebooks_path="${notebooks_path}"
 input_notebook="\${notebooks_path}/1_generate-permutations.ipynb"
-output_notebook="\${notebooks_path}/1_generate-permutations_output_${perm_num}.ipynb"
+output_notebook="\${notebooks_path}/outputs/1_generate-permutations_output_${perm_num}.ipynb"
 
 echo "Input notebook: \$input_notebook"
 echo "Output notebook: \$output_notebook"
@@ -80,10 +87,6 @@ for permutation_num in {0..10}; do
 done
 
 
-
-echo ""
-echo "****** Auto-submitting all permutation jobs ******"
-
 # Automatically submit all jobs
 echo "Submitting all permutation jobs..."
 JOB_IDS=()
@@ -102,6 +105,3 @@ echo ""
 echo "Monitor job status with: squeue -u \$USER"
 echo "Cancel all jobs with: scancel ${JOB_IDS[@]}"
 
-
-# Deactivate the virtual environment w/ conda
-conda deactivate
