@@ -57,7 +57,9 @@ echo "Input notebook: $input_notebook"
 echo "Output notebook: $output_notebook"
 
 # Run the notebook with papermill, passing the permutations parameter
-papermill "$input_notebook" "$output_notebook" -p permutations_subdirectory "$PERMUTATIONS_SUBDIR"
+papermill "$input_notebook" "$output_notebook" \
+    --kernel dwpc_rnn \
+    -p permutations_subdirectory "$PERMUTATIONS_SUBDIR"
 
 echo "Neural network edge prediction analysis completed successfully!"
 
