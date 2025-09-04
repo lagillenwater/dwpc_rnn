@@ -52,8 +52,11 @@ mkdir -p "${notebooks_path}/outputs"
 echo "Input notebook: $input_notebook"
 echo "Output notebook: $output_notebook"
 
-# Run the notebook with papermill
-papermill "$input_notebook" "$output_notebook"
+# Run the notebook using papermill
+echo "Starting download of null graphs at $(date)"
+papermill "$input_notebook" "$output_notebook" \
+    --kernel dwpc_rnn \
+    --log-output
 
 echo "Hetionet null graphs download completed successfully!"
 
