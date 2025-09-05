@@ -51,7 +51,10 @@ echo "****** Running neural network edge prediction analysis ******"
 echo "Using permutations subdirectory: $PERMUTATIONS_SUBDIR"
 
 input_notebook=${notebooks_path}/2_learn_null_edge.ipynb
-output_notebook=${notebooks_path}/outputs/2_learn_null_edge_output.ipynb
+output_notebook=${notebooks_path}/outputs/2_learn_null_edge_output_${PERMUTATIONS_SUBDIR}.ipynb
+
+# Create output directory if it doesn't exist
+mkdir -p "${notebooks_path}/outputs"
 
 echo "Input notebook: $input_notebook"
 echo "Output notebook: $output_notebook"
