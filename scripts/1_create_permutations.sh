@@ -63,11 +63,15 @@ conda activate dwpc_rnn
 # Define paths
 notebooks_path="${notebooks_path}"
 input_notebook="\${notebooks_path}/1_generate-permutations.ipynb"
-output_notebook="\${notebooks_path}/outputs/1_generate-permutations_output_${perm_num}.ipynb"
+output_notebook="\${notebooks_path}/outputs/permutation_notebooks/1_generate-permutations_output_${perm_num}.ipynb"
 
 echo "Input notebook: \$input_notebook"
 echo "Output notebook: \$output_notebook"
 echo "Permutation number: ${perm_num}"
+
+# Create output directory if it doesn't exist
+mkdir -p "\${notebooks_path}/outputs/permutation_notebooks"
+echo "Created output directory: \${notebooks_path}/outputs/permutation_notebooks"
 
 # Run papermill with the permutation_number parameter
 echo "Starting papermill execution..."
